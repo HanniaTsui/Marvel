@@ -1,0 +1,169 @@
+body{
+    background-color: #EDEDDE;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 60px;
+}
+
+.red{
+    background-color: #950000;
+    width: 99%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+.logo{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 50px;
+}
+
+.btnMenu{
+    width: 30px;
+    height: 30px;
+}
+
+.btnRojo{
+    background-color: #950000;
+    text-align: right;
+    margin-right: 10px;
+
+}
+
+.menu {
+    display: none; 
+    background-color: #EDEDDE;
+    position: fixed;
+    border-radius: 5px;
+    border: 2px solid #333;
+    top: 60px; 
+    right: 10px; 
+    width: 200px;
+    padding: 10px;
+    color: black;
+    z-index: 10001;
+}
+
+
+.imagen img {
+    width: 150px;
+    height: 234.17px;
+    margin: 10px;
+    display: block;
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+h1{
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: medium;
+    margin-top: 10px;
+    max-width: 150px;
+    margin: 5px;
+    text-align: center;
+}
+
+.total{
+    margin-top: 10px;
+    max-width: 500px;
+    margin: 25px;
+}
+
+.coleccion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;    
+    padding-left: 77px;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding-left: 77px;
+}
+
+.lectura{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 77px;
+}
+.cuerpo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.titulo{
+    width: 100%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .coleccion, .lectura, .lista {
+        padding-left: 25px;
+        
+    }
+
+    .imagen img {
+        width: 90px;  /* Ajusta el tamaño de las imágenes en pantallas pequeñas */
+        height: 140.5px;
+    }
+
+    h1 {
+        font-size: medium;  
+    }
+
+    h2 {
+        font-size: small;  
+        max-width: 90px;
+        text-align: center; 
+    }
+
+    .total{
+        margin-top: 10px;
+        max-width: 500px;
+        margin: 10px;
+    }
+}
+
+.btnSubir a {
+    display: inline-block;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 30px; /* Tamaño del botón */
+    height: 30px; /* Tamaño del botón */
+}
+
+.btnSubir img.subir {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y cubra el contenedor */
+}
+
+.menuDesplegable{
+    display: none;
+}
+
+
+[id] {
+    scroll-margin-top: 60px; /* Ajusta el valor a la altura de la barra de navegación fija */
+}
