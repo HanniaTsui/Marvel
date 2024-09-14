@@ -84,8 +84,8 @@ h2 {
 
 .total{
     margin-top: 10px;
-    max-width: 500px;
-    margin: 25px;
+    width: 100%;
+    text-align: center;
 }
 
 .coleccion {
@@ -168,8 +168,8 @@ h2 {
 
     .total{
         margin-top: 10px;
-        max-width: 500px;
-        margin: 10px;
+        width: 100%;
+        text-align: center;
     }
 
     .btnSubir a{
