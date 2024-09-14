@@ -99,12 +99,14 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; 
+    text-align: center; 
 }
 
 .lectura{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    text-align: center; 
 }
 
 
