@@ -646,6 +646,8 @@
     document.addEventListener("DOMContentLoaded", function() {
         const btnRojo = document.querySelector(".btnRojo"); // Selecciona el botón
         const menuDesplegable = document.querySelector("#menuDesplegable"); // Selecciona el menú desplegable
+        const menuItems = menuDesplegable.querySelectorAll("a"); // Selecciona todos los elementos de menú dentro del menú desplegable
+
     
         // Función para alternar la visibilidad del menú desplegable
         function toggleMenu() {
@@ -669,6 +671,13 @@
                 menuDesplegable.style.display = "none";
             }
         });
+
+        // Maneja el clic en los elementos del menú
+        menuItems.forEach(item => {
+        item.addEventListener("click", function() {
+            menuDesplegable.style.display = "none";
+        });
+    });
         
     });
     
