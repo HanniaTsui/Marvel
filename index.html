@@ -644,18 +644,35 @@
 <script>
     //Funcionalidad del boton de Menu
     document.addEventListener("DOMContentLoaded", function() {
-        const btnRojo = document.querySelector(".btnRojo"); //Se selecciona el boton 
-        const menuDesplegable = document.querySelector("#menuDesplegable"); // Se selecciona el menu desplegable
-
-        btnRojo.addEventListener("click", function() { //Manejador de eventos
-            // Alterna la visibilidad del menú desplegable
+        const btnRojo = document.querySelector(".btnRojo"); // Selecciona el botón
+        const menuDesplegable = document.querySelector("#menuDesplegable"); // Selecciona el menú desplegable
+    
+        // Función para alternar la visibilidad del menú desplegable
+        function toggleMenu() {
             if (menuDesplegable.style.display === "block") {
                 menuDesplegable.style.display = "none";
             } else {
                 menuDesplegable.style.display = "block";
             }
+        }
+    
+        // Maneja el clic en el botón
+        btnRojo.addEventListener("click", function(event) {
+            event.stopPropagation(); // Previene que el clic en el botón cierre el menú inmediatamente
+            toggleMenu();
         });
+    
+        // Maneja el clic en el documento
+        document.addEventListener("click", function(event) {
+            // Verifica si el clic se realizó fuera del botón y del menú
+            if (!btnRojo.contains(event.target) && !menuDesplegable.contains(event.target)) {
+                menuDesplegable.style.display = "none";
+            }
+        });
+        
     });
+    
+    
     //Contador de comics (Lista de lectura)
     document.addEventListener("DOMContentLoaded", function() {
         const totalComics = document.querySelectorAll('.lect ').length;
