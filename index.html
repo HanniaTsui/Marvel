@@ -14,17 +14,14 @@
             <button class="btnRojo" type="button" > <img class="btnMenu" src="https://cdn-icons-png.flaticon.com/128/8212/8212733.png" /></button>
 
         </div>
-
         <nav id="menuDesplegable" class="menu">
             <ul style="list-style: none;">
                 <li><a href="#coleccion">Mi colección</a></li>
                 <li><a href="#lista">Mi lista de deseos</a></li>
                 <li><a href="#lectura">Orden de lectura</a></li>
             </ul>
-        </nav>
-        
+        </nav> 
     </header>
-
     <section class="cuerpo" >
 
        <!-- <input type="search" name="buscar" id=""> -->
@@ -167,8 +164,17 @@
         <div class="titulo" id="lista"><h1>Mi lista de deseos</h1></div>
         
         <div class="imagen">
-            <img src="https://m.media-amazon.com/images/I/51Nul8cIAhS._SY780_.jpg" alt="comic">
-            <h2>The Thanos Quest</h2>
+            <!-- Contenedor para la tarjeta -->
+            <div class="card">
+                <div class="card-front">
+                    <img src="https://m.media-amazon.com/images/I/51Nul8cIAhS._SY780_.jpg" alt="comic">
+                </div>
+                <div class="card-back">
+                    <p>¡Thanos se embarca en la búsqueda definitiva del amor y la destrucción que lo consume todo!</p>
+                </div>
+            </div>
+            <!-- Texto que se muestra siempre visible -->
+            <h2 class="titulo-fijo">The Thanos Quest</h2>
         </div>
         <div class="imagen">
             <img src="https://m.media-amazon.com/images/I/71Q22N9uyBL._AC_UF894,1000_QL80_.jpg" alt="comic">
@@ -632,13 +638,9 @@
     <div class="btnSubir">
         <a href="#" title="Subir arriba"><img class="subir" src="https://cdn-icons-png.flaticon.com/128/4162/4162042.png"></a>
         </div>
-</section>
-
-
-    
+</section>  
 </body>
 </html>
-
 
 
 <script>
