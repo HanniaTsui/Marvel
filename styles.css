@@ -56,7 +56,7 @@ body{
 .imagen img {
     width: 150px;
     height: 234.17px;
-    display: block;
+    display: inblock;
     
 }
 
@@ -132,6 +132,8 @@ h2 {
     text-align: center;    
 }
 
+
+
 .lista {
     display: flex;
     flex-wrap: wrap;
@@ -167,7 +169,7 @@ h2 {
     object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y cubra el contenedor */
 }
 
-.menuDesplegable{
+.menuDesplegable, .elementos{
     display: none;
 }
 
@@ -233,3 +235,26 @@ h2 {
     
     
 }
+
+
+
+.search-container {
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center
+}
+
+#elementos{
+    display: none;
+}
+
+#search-input {
+    padding: 5px;
+    width: 200px;
+}
+
+
+
+
