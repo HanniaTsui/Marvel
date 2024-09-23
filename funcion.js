@@ -86,25 +86,4 @@ function filtrar() {
   }
 }
 
-// Agregar el evento de clic a los enlaces
-document.querySelectorAll('#myUL a').forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-      var targetId = this.getAttribute('href').substring(1); // Obtener el id del cómic
-      
-      // Limpiar el resaltado de todos los cómics
-      document.querySelectorAll('.imagen').forEach(comic => {
-        comic.classList.remove('highlight');
-      });
-  
-      // Agregar la clase de resaltado al cómic seleccionado
-      var targetComic = document.getElementById(targetId);
-      if (targetComic) {
-        targetComic.classList.add('highlight');
-      }
-    });
-  });
-  
 
-
-  

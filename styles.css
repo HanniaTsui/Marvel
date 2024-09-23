@@ -21,22 +21,12 @@ body{
 
 .logo{
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 12px;
     margin-bottom: 5px;
     height: 50px;
 }
 
-.btnMenu{
-    width: 30px;
-    height: 30px;
-}
 
-.btnRojo{
-    background-color: #950000;
-    text-align: right;
-    margin-right: 10px;
-
-}
 
 .menu {
     display: none; 
@@ -91,9 +81,6 @@ body{
     overflow: hidden; /* Oculta cualquier contenido que desborde */
 }
 
-li{
-    margin-bottom: 10px;
-}
 
 .card-back {
     /* Parte trasera de la tarjeta */
@@ -112,12 +99,6 @@ h1{
     font-size: 24px;
 }
 
-h2 {
-    font-size: medium;
-    margin-top: 10px;
-    max-width: 150px;
-    text-align: center;
-}
 
 .total{
     margin-top: 10px;
@@ -125,7 +106,7 @@ h2 {
     text-align: center;
 }
 
-.coleccion {
+.coleccion, .lista, .lectura, .extras {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -134,24 +115,16 @@ h2 {
 
 
 
-.lista {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-    text-align: center; 
-}
-
-.lectura, .extras{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    text-align: center; 
-}
-
-
 .titulo{
     width: 100%;
     
+}
+
+.titulo-fijo{
+    font-size: 16px;
+    margin-top: 10px;
+    max-width: 150px;
+    text-align: center;
 }
 
 .btnSubir a {
@@ -169,9 +142,7 @@ h2 {
     object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y cubra el contenedor */
 }
 
-.menuDesplegable, .elementos{
-    display: none;
-}
+
 
 
 [id] {
@@ -200,7 +171,8 @@ h2 {
         font-size: medium;  
     }
 
-    h2 {
+    .titulo-fijo {
+        padding-top: 5px;
         font-size: 12px;  
         max-width: 90px;
         text-align: center; 
@@ -232,18 +204,41 @@ h2 {
         height: 140.5px;
     }
 
-    
-    
+    .menu-center{
+        display: none;
+    }
+
+    .btnRojo{
+        background-color: #950000;
+        width: 100%;
+        height:30px;
+        
+    }
+
+    .menu {
+        position: absolute;
+        display: flex; /* Mostrar el menú en versión móvil */
+    }
+
+    .btnMenu{
+        width: 100%;
+        height: 50px;
+    }
+
+    #search-input {
+        padding: 3px;
+        width: 100px;
+    }
+
 }
-
-
 
 .search-container {
     text-align: center;
     position: relative;
     display: flex;
     justify-content: center; 
-    align-items: center
+    align-items: center;
+    margin-right: 15px;
 }
 
 #elementos{
@@ -268,7 +263,6 @@ h2 {
     
 }
 
-
 .menu-center li {
     list-style-type: none; /*Sin viñeta*/
     display: inline-block;
@@ -278,8 +272,8 @@ h2 {
     text-decoration: none; /*Sin linea en el link*/
     color: #d9dcd1;
     font-weight: bold;
+    
 }
-
 
 .menu-center a:hover{ 
     background-color: black;
@@ -289,4 +283,78 @@ h2 {
 .menus{
     background-color: #950000;
     padding: 7px;
+}
+
+.elementos{
+    display: none;
+}
+
+
+/*Boton menu para movil*/
+.menu {
+    display: none;
+    border-radius: 5px;
+    border: 2px solid #333;
+    top: 20px; 
+    width: 150px;
+    z-index: 10003;
+    font-size: 14px;
+}
+
+.btnMenu{
+    width: 0;
+    height: 0px;
+    padding: 0;
+}
+
+.btnRojo{
+    display: none;
+    background-color: #950000;
+    width: 0px;
+    height:0px;
+    border: 0;
+    padding: 0;
+    
+}
+.mDes{
+    text-decoration: none;
+    color: black;
+    float: left;
+    padding: 3%;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+/*No eliminar*/
+@media screen and (max-width: 605px) {
+    .menu-center{
+        display: none;
+    }
+
+    .btnRojo {
+        display: block; 
+        background-color: #950000;
+        width: 100%;
+        height: 50px;
+        z-index: 10002;
+    }
+
+    .btnMenu{
+        width: 100%;
+        height: 50px;
+    }
+
+    #search-input {
+        padding: 3px;
+        width: 140px;
+    }
+}
+
+.fin{
+    width: 100%;
+    height: 40px;
+    background: #EDEDDE;
+
 }
