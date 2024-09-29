@@ -1097,3 +1097,12 @@ const comicsContainerOrigenes = document.getElementById("origenes")
 });
 
     
+//Rotar tarjeta
+// Detectar si es un dispositivo táctil
+if (window.matchMedia('(hover: none)').matches) {
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('rotate');
+        });
+    });
+}
