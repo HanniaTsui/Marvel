@@ -37,8 +37,6 @@ body{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 5%;
-    padding-right: 5%;
 
 }
 
@@ -137,12 +135,12 @@ h1{
 
 
 @media screen and (max-width: 360px) {
-    .coleccion, .lectura, .lista {
-        padding-left: 0px;
+    .coleccion, .lectura, .lista, .extras, .origenes {
         text-align: center;
-        gap: 17px;
-        padding: 0x;
+        gap: 20px;
+        padding: 18px;
         margin-top: 5px;
+        justify-content: center;
     }
 
     .imagen img {
@@ -291,6 +289,7 @@ h1{
 
 .menu a {
     display: block;
+    width: 100%;
     margin: 5px 100px 0 30px;
 }
 
@@ -343,11 +342,19 @@ ul{
         height: 50px;
     }
 
+    .titulo-fijo {
+        padding-top: 5px;
+        font-size: 14px;  
+        text-align: center; 
+        margin: 0px;
+    }
+
     #search-input {
         padding: 3px;
         width: 140px;
     }
 }
+
 
 .fin{
     width: 100%;
