@@ -105,10 +105,9 @@ h1{
     text-align: center;
 }
 
-.coleccion, .lista, .lectura, .extras {
+.coleccion, .lista, .lectura, .extras, .origenes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
     text-align: center;   
     width: 100%; 
@@ -143,9 +142,6 @@ h1{
     height: 100%; 
     object-fit: cover; /* Asegura que la imagen mantenga sus proporciones y cubra el contenedor */
 }
-
-
-
 
 [id] {
     scroll-margin-top:100px; /* Ajusta el valor a la altura de la barra de navegación fija */
