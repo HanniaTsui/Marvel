@@ -3,229 +3,7 @@ const comicsContainerList = document.getElementById("lista");
 const comicsContainerLect = document.getElementById("lectura");
 const comicsContainerExtra = document.getElementById("extras");
 const comicsContainerOrigenes = document.getElementById("origenes")
-    const comics = [
-        {
-            title: "Origenes Vol 1",
-            img: "https://i1.whakoom.com/large/09/2b/f20f5c3a899b4507b085d982d23ae72d.jpg",
-            description: "Explora el origen de los 4 Fantásticos, Hulk y Thor."
-        },
-        {
-            title: "Origenes Vol 2",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaXNWgqROBBJb0LtNnp6t94sSAPv-8bOVPg&s",
-            description: "Explora el origen de Thor, Spiderman y Dr. Strange."
-        },
-        {
-            title: "X-MEN: Fenix Oscura",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY1Rl_6Pn45_PkYPDULq3m1BCWG_w_FxO1ng&s",
-            description: "Un relato épico de los X-MEN enfrentando a la Fénix Oscura."
-        },
-        {
-            title: "La llegada de Galactus",
-            img: "https://www.cope.es/blogs/cine-y-libertad/wp-content/uploads/sites/7/2020/01/los-4-fantasticosla-llegada-de-galactus-clave-para-entender-a-marvel.jpg",
-            description: "Silver Surfer viene a la Tierra a avisar de la destrucción para saciar el hambre de su amo."
-        },
-        {
-            title: "La muerte de Gwen Stacy",
-            img: "https://m.media-amazon.com/images/I/61pvvkcCIzL._AC_UF894,1000_QL80_.jpg",
-            description: "Un momento clave en la historia de Spider-Man."
-        },
-        {
-            title: "IRON MAN: El demonio en la botella",
-            img: "https://www.cuartomundo.cl/wp-content/uploads/2018/08/Invincible-Iron-man-128.jpg",
-            description: "La lucha de Tony Stark contra su propia adicción: el alcoholismo."
-        },
-        {
-            title: "Secret Wars 1984",
-            img: "https://m.media-amazon.com/images/I/61KiaUc5h1L._SY580_.jpg",
-            description: "Los héroes y villanos de Marvel se enfrentan en una batalla épica."
-        },
-        {
-            title: "X-MEN: Días del futuro Presente",
-            img: "https://i1.whakoom.com/large/0e/3e/9280a8c47e7345f08204b8b3100e192e.jpg",
-            description: "Un hombre del futuro busca la seguridad de su pasado, regresa a aquellos a quienes amó, para salvarlos de un futuro de tiranía y muerte."
-        },
-        {
-            title: "El Guantelete del infinito",
-            img: "https://http2.mlstatic.com/D_NQ_NP_611654-MLM47678258155_092021-O.webp",
-            description: "Thanos se ha adueñado de las Gemas del Infinito y las ha colocado en su guante izquierdo para formar el Guantelete del Infinito."
-        },
-        {
-            title: "X-MEN: Genesis Mutante 2.0",
-            img: "https://static.wixstatic.com/media/e9b21b_f5e75d2b043e4730b88dbfc9c06a89c4~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
-            description: "Una nueva mirada a los orígenes de los X-Men."
-        },
-        {
-            title: "Infinity War",
-            img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1514241733i/37677683.jpg",
-            description: "Adam Warlock toma posesión del Guantelete del Infinito, expulsa los aspectos buenos y malos de su ser para convertirse en un ser 100% lógico."
-        },
-        {
-            title: "Avengers: Desunidos",
-            img: "https://images.cdn2.buscalibre.com/fit-in/360x360/fd/97/fd974a78f386b1c2ade097b7344e14b1.jpg",
-            description: "Los Avengers enfrentan su mayor desafío final después de años de proteger el mundo, lo que podría significar el fin del equipo."
-        },
-        {
-            title: "Capitán América: El soldado del invierno",
-            img: "https://images.cdn2.buscalibre.com/fit-in/360x360/9b/67/9b670f06f1eedfa839215bb771dccd86.jpg",
-            description: "El regreso de un viejo amigo se convierte en un desafío."
-        },
-        {
-            title: "New Avengers: Fuga",
-            img: "https://www.smashmexico.com.mx/wp-content/uploads/2021/11/nuevos-avengers-la-fuga-salvat-portada.jpg",
-            description: "Después de la disolución de los Avengers, un villano misterioso libera a cientos de villanos de la prisión de La Balsa."
-        },
-        {
-            title: "Secret War 2004",
-            img: "https://m.media-amazon.com/images/I/51FXRwPdBJL._SY1000_.jpg",
-            description: "Los heroes luchan contra una organización secreta."
-        },
-        {
-            title: "House of M",
-            img: "https://m.media-amazon.com/images/I/51v4CnTCv9L._SY780_.jpg",
-            description: "Un mundo alternativo donde los mutantes son los dominantes."
-        },
-        {
-            title: "La Cruzada de los niños",
-            img: "https://www.eslahoradelastortas.com/?attachment_id=16381",
-            description: "¿Qué puedes decirme de los Jóvenes Vengadores, concretamente de los llamados Wiccan y Veloz? Puedo decirte, que no son tus nietos."
-        },
-        {
-            title: "Avengers: Iluminati",
-            img: "https://lumiere-a.akamaihd.net/v1/images/newavengersilluminatti1_fade7f53.jpeg?region=0,0,550,835",
-            description: "Un grupo secreto de héroes que toma decisiones difíciles."
-        },
-        {
-            title: "Capitán América: Civil War",
-            img: "https://m.media-amazon.com/images/I/8178RfFOJSL._AC_UF894,1000_QL80_.jpg",
-            description: "Una disputa entre el Capitan América y IRON MAN, heroes enfrentados por sus ideales."
-        },
-        {
-            title: "World War Hulk",
-            img: "https://m.media-amazon.com/images/I/9191ioH8sqL._AC_UF894,1000_QL80_.jpg",
-            description: "Hulk regresa a la Tierra en busca de venganza."
-        },
-        {
-            title: "Secret Invasion",
-            img: "https://m.media-amazon.com/images/I/91+nuTpB+kL._AC_UF894,1000_QL80_.jpg",
-            description: "Una invasión secreta que pone a prueba a los héroes."
-        },
-        {
-            title: "Avengers: Siege",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBTNMmMXhkqBWATmeuyxEKV7CSsIqcbH62fA&s",
-            description: "Los Vengadores enfrentan una crisis en su propia casa."
-        },
-        {
-            title: "Shadowland",
-            img: "https://www.elsotano.com/imagenes_grandes/7509997/750999704651.JPG",
-            description: "Lester escapa de una lanzadera de balsa y regresa como Bullseye y va a cazar a Daredevil y a la Mano."
-        },
-        {
-            title: "Fear Itself",
-            img: "https://m.media-amazon.com/images/I/51tT20RZUFL._SY1000_.jpg",
-            description: "Los héroes luchan contra Serpiente, una deidad Asgardiana que busca recuperar el Trono de Asgard."
-        },
-        {
-            title: "Avengers vs X-MEN",
-            img: "https://m.media-amazon.com/images/I/81M-B9isPOL._AC_UF894,1000_QL80_.jpg",
-            description: "Un enfrentamiento titánico entre dos de los mayores grupos de héroes."
-        },
-        {
-            title: "Avengers vs X-MEN Batallas",
-            img: "https://m.media-amazon.com/images/I/519N2T-clLS._SY580_.jpg",
-            description: "Las batallas más intensas entre Vengadores y X-Men."
-        },
-        {
-            title: "Infinity",
-            img: "https://m.media-amazon.com/images/I/815sbci-szL._AC_UF894,1000_QL80_.jpg",
-            description: "Thanos y su Orden Negra aprovecharon la ausencia de los Héroes Más Poderosos de la Tierra en el planeta para arrasarlo."
-        },
-        {
-            title: "Secret Wars 2015",
-            img: "https://m.media-amazon.com/images/I/51Uh4Y-MSML._SY1000_.jpg",
-            description: "El Universo Marvel tal como lo conoces se ha acabado. El Universo Ultimate tal como lo conoces se ha acabado."
-        },
-        {
-            title: "Civil War 2",
-            img: "https://m.media-amazon.com/images/I/819kcdItFcL._AC_UF894,1000_QL80_.jpg",
-            description: "Los héroes se dividen una vez más por un nuevo conflicto. Una pelea entre los Vengadores y los Inhumanos."
-        },
-        {
-            title: "King in Black",
-            img: "https://m.media-amazon.com/images/I/51gbjGyesIL._SY580_.jpg",
-            description: "La llegada de un nuevo enemigo que pone en jaque a todos."
-        },
-        {
-            title: "Devil's Reign",
-            img: "https://cdn.marvel.com/u/prod/marvel/i/mg/c/d0/62432e8cef8bf/clean.jpg",
-            description: "En un intento por aumentar su poder, el alcalde Wilson Fisk ha prohibido a los superhéroes en la ciudad de Nueva York."
-        },
-        {
-            title: "Old Man Logan",
-            img: "https://m.media-amazon.com/images/I/91Z1FuafxKL._AC_UF1000,1000_QL80_.jpg",
-            description: "Una historia de un Wolverine envejecido en un mundo devastado."
-        },
-        {
-            title: "IRON MAN: Extremis",
-            img: "https://img-cdn.hpb.com/normal/826663121193/0/0/300.jpg",
-            description: "La reinvención de Iron Man para la nueva era."
-        },
-        {
-            title: "Avengers: The Initiative",
-            img: "https://m.media-amazon.com/images/I/71mf9sQhXKL._AC_UF894,1000_QL80_.jpg",
-            description: "La Guerra Civil ha terminado y, a partir de aquí, ésta es la nueva cara del Universo Marvel: La Iniciativa. ¿De qué lado estabas tú durante la guerra?"
-        },
-        {
-            title: "X-MEN: Días del futuro pasado",
-            img: "https://storage.googleapis.com/scb22uploads/2018/09/xmen-dias-del-futuro-pasado-1.jpg",
-            description: "Kate Pryde viaja a través del tiempo para evitar el asesinato del Senador Kelly y así poder salvar a toda la raza mutante."
-        },
-        {
-            title: "4 Fantásticos vs X-Men",
-            img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1552385226i/324899.jpg",
-            description: "Reed Richard debe superar sus temores, ¡o dejar a la agonizante Kitty Pride en las manos de Dr. Doom!"
-        },
-        {
-            title: "4 Fantásticos Perdurará la Tierra",
-            img: "images/4F-Perdurara la tierra.png",
-            description: "¡Hay que detener al otrora poderoso Galactus antes de que devore la Tierra! En Origenes V1"
-        },
-        {
-            title: "Thor el Poderoso - Origen",
-            img: "images/thor el poderoso.jpg",
-            description: "¡El Origen de Thor en Origenes V1!"
-        },
-        {
-            title: "La llegada de Hulk - Origen",
-            img: "images/la llegada de Hulk.jpg",
-            description: "El Origen del Increible Hulk en Origenes V1"
-        },
-        {
-            title: "Hulk: El ha Vuelto",
-            img: "images/el ha vuelto.jpg",
-            description: "Bruce finalmente encuentra a Betty Ross... ¡en un convento! ¿Se dará cuenta la recién declarada Betty de su amor por Bruce una vez más?"
-        },
-        {
-            title: "Thor: La Canción del Mjolnir",
-            img: "images/la cancion del mjolnir.jpg",
-            description: "Thor se enfreta a Jormungand en Origenes V2"
-        },
-        {
-            title: "Spiderman - Introducción",
-            img: "images/origen spiderman.png",
-            description: "Conociendo al hombre araña en Origenes V2"
-        },
-        {
-            title: "Dr. Strange: Maestro de Magia Negra",
-            img: "images/dr strange maestro de la magia negra.jpg",
-            description: "Conoce a Dr. Strange en Origenes V2"
-        },
-        {
-            title: "Avengers: Ira de Ultron",
-            img: "images/ira de ultron.jpg",
-            description: "El androide genocida Ultron había sido disparado al espacio para nunca regresar… o eso creyeron."
-        },
-    ];
-
+    
     const listComics = [
         {
             title: "The Thanos Quest",
@@ -927,7 +705,7 @@ const comicsContainerOrigenes = document.getElementById("origenes")
     });
 
     //Mi colección
-    comics.forEach((comic, index) => {
+   /* comics.forEach((comic, index) => {
         const comicCard = `
             <div class="imagen" data-title="${comic.title}">
                 <div class="card">
@@ -942,7 +720,36 @@ const comicsContainerOrigenes = document.getElementById("origenes")
             </div>
         `;
         comicsContainer.innerHTML += comicCard;
+    });*/
+
+    // Selecciona el contenedor donde se mostrarán los cómics
+    // Cargar el archivo JSON usando fetch
+    // Fetch para obtener el archivo JSON
+fetch('comics.json')
+.then(response => response.json()) // Parseamos el JSON
+.then(comics => {
+    const comicsContainer = document.getElementById("coleccion");
+
+    // Recorremos cada cómic en el JSON y creamos las tarjetas
+    comics.forEach((comic, index) => {
+        const comicCard = `
+            <div class="imagen" data-title="${comic.title}">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="${comic.img}" alt="${comic.title}">
+                    </div>
+                    <div class="card-back">
+                        <p>${comic.description}</p>
+                    </div>
+                </div>
+                <h2 class="titulo-fijo">${index + 1}. ${comic.title}</h2>
+            </div>
+        `;
+        comicsContainer.innerHTML += comicCard;
     });
+})
+.catch(error => console.error('Error al cargar los cómics:', error));
+
 
     //Lista de deseos
     listComics.forEach((comic, index) => {
